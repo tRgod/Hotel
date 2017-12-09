@@ -11,23 +11,23 @@ void Vaerelser::addRoom(Vaerelse& vIn)
 	const int x = vIn.getPris();
 
 
-		if (x < 1000 && x>100)
+		if (x < 500 && x>100)
 		{
 			klasseA.push_back(vIn);
 		}
-		if (x > 1000 && x < 2000)
+		if (x > 500 && x < 1000)
 		{
 			klasseB.push_back(vIn);
 		}
-		if (x > 2000 && x < 3000)
+		if (x > 1000 && x < 1500)
 		{
 			klasseC.push_back(vIn);
 		}
-		if (x > 3000 && x < 4000)
+		if (x > 1500 && x < 2000)
 		{
 			klasseD.push_back(vIn);
 		}
-		if (x > 4000)
+		if (x > 2000)
 		{
 			klasseE.push_back(vIn);
 		}
