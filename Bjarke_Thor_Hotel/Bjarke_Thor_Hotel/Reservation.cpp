@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include "Dato.h"
+#include <iomanip>
 
 
 Reservation::Reservation()
@@ -76,7 +77,7 @@ void Reservation::cancleRes(int resNr)
 		if (reservationer[i][4] == resNr)
 		{
 			reservationer.erase(reservationer.begin() + delNum);
-			std::cout << "Reservation Nr# " << resNr << " er anulleret"<< std::endl;
+			std::cout << "Reservation Nr. " << resNr << " er anulleret."<< std::endl;
 			std::cout << std::endl;
 		}
 		else
@@ -101,7 +102,6 @@ void Reservation::addPrisklasser(Vaerelser& vIn)
 
 void Reservation::printRes()
 {
-
 	for (int i = 0; i < reservationer.size(); i++)
 	{
 		Dato datoFra(reservationer[i][2]);
@@ -113,10 +113,47 @@ void Reservation::printRes()
 		std::cout << "Til den ";
 		datoTil.print();
 		std::cout << std::endl;
+	}
+}
 
+void Reservation::printPrisklasser()
+{
+	std::cout << "Prisklasse A:" << std::endl << "(100 - 499)" << std::endl;
+	for (int i = 0; i < prisKlasseA.size(); i++)
+	{
+		std::cout << "Vaerelse nr. " << setw(3) << prisKlasseA[i].getVnummer() << " | Pris: " << setw(4) << prisKlasseA[i].getPris() << std::endl;
+	}
 
+	cout << endl;
 
-		//std::cout << "Vaerelse: " << reservationer[i][1] << " Fra: " << reservationer[i][2] << " Til: " << reservationer[i][3] << "Reg Nr: " << reservationer[i][4] << std::endl;
+	std::cout << "Prisklasse B:" << std::endl << "(500 - 999)" << std::endl;
+	for (int i = 0; i < prisKlasseB.size(); i++)
+	{
+		std::cout << "Vaerelse nr. " << setw(3) << prisKlasseB[i].getVnummer() << " | Pris: " << setw(4) << prisKlasseB[i].getPris() << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	std::cout << "Prisklasse C:" << std::endl << "(1000 - 1499)" << std::endl;
+	for (int i = 0; i < prisKlasseC.size(); i++)
+	{
+		std::cout << "Vaerelse nr. " << setw(3) << prisKlasseC[i].getVnummer() << " | Pris: " << setw(4) << prisKlasseC[i].getPris() << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	std::cout << "Prisklasse D:" << std::endl << "(1500 - 1999)" << std::endl;
+	for (int i = 0; i < prisKlasseD.size(); i++)
+	{
+		std::cout << "Vaerelse nr. " << setw(3) << prisKlasseD[i].getVnummer() << " | Pris: " << setw(4) << prisKlasseD[i].getPris() << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	std::cout << "Prisklasse E:" << std::endl << "(2000)" << std::endl;
+	for (int i = 0; i < prisKlasseE.size(); i++)
+	{
+		std::cout << "Vaerelse nr. " << setw(3) << prisKlasseE[i].getVnummer() << " | Pris: " << setw(4) << prisKlasseE[i].getPris() << std::endl;
 	}
 }
 

@@ -13,116 +13,72 @@ int main() {
 	Vaerelser vaerelser;
 
 	// Opret værelser
-	Vaerelse v1(1, 1020);
+	Vaerelse v1(1, 1000);
 	vaerelser.addRoom(v1);
-	Vaerelse v2(2, 324);
+	Vaerelse v2(2, 280);
 	vaerelser.addRoom(v2);
-	Vaerelse v3(3, 200.75);
+	Vaerelse v3(3, 330);
 	vaerelser.addRoom(v3);
-	Vaerelse v4(4, 22324.765432);
+	Vaerelse v4(4, 700);
 	vaerelser.addRoom(v4);
-	Vaerelse v5(5, 5000);
+	Vaerelse v5(5, 860);
 	vaerelser.addRoom(v5);
-	Vaerelse v6(6, 2235);
+	Vaerelse v6(6, 940);
 	vaerelser.addRoom(v6);
-	Vaerelse v7(7, 543.5);
+	Vaerelse v7(7, 1120);
 	vaerelser.addRoom(v7);
-	Vaerelse v8(8, 1323.5);
+	Vaerelse v8(8, 940);
 	vaerelser.addRoom(v8);
-	Vaerelse v9(9, 1444);
+	Vaerelse v9(9, 1565);
 	vaerelser.addRoom(v9);
-	Vaerelse v10(10, 12230.5);
+	Vaerelse v10(10, 1700);
 	vaerelser.addRoom(v10);
-	Vaerelse v11(11, 100025);
+	Vaerelse v11(11, 375);
 	vaerelser.addRoom(v11);
-	Vaerelse v12(12, 1505);
+	Vaerelse v12(12, 2000);
 	vaerelser.addRoom(v12);
-	Vaerelse v13(13, 13041);
+	Vaerelse v13(13, 2000);
 	vaerelser.addRoom(v13);
+	Vaerelse v14(14, 1780);
+	vaerelser.addRoom(v14);
+	Vaerelse v15(15, 990);
+	vaerelser.addRoom(v15);
 	
 	hotel.addPrisklasser(vaerelser);
 	
 	// Gæster
-	Gaest john("John", 19741209, 27);
-	Gaest jared("Jared", 19720412, 28);
+	Gaest john("John", 19741209, 100);
+	Gaest jared("Jared", 19720412, 101);
 
+	// Se priser
+	hotel.printPrisklasser();
 
-
-
-	for (int i = 0; i < vaerelser.getVvec().size(); i++)
-	{
-		cout << "Varelses nr: " << vaerelser.getVvec()[i].getVnummer() << " | Pris: " << vaerelser.getVvec()[i].getPris() << endl;
-	}
-
-	cout << endl;
-
-	cout << "Prisklasse A:" << endl;
-	for (int i = 0; i < vaerelser.getKlasseA().size(); i++)
-	{
-		cout << "Nr. " << vaerelser.getKlasseA()[i].getVnummer() << " Pris: " << vaerelser.getKlasseA()[i].getPris() << endl;
-	}
-
-	cout << endl;
-
-	cout << "Prisklasse B:" << endl;
-	for (int i = 0; i < vaerelser.getKlasseB().size(); i++)
-	{
-		cout << "Nr. " << vaerelser.getKlasseB()[i].getVnummer() << " Pris: " << vaerelser.getKlasseB()[i].getPris() << endl;
-	}
-
-	cout << endl;
-
-	cout << "Prisklasse C:" << endl;
-	for (int i = 0; i < vaerelser.getKlasseC().size(); i++)
-	{
-		cout << "Nr. " << vaerelser.getKlasseC()[i].getVnummer() << " Pris: " << vaerelser.getKlasseC()[i].getPris() << endl;
-	}
-
-	cout << endl;
-
-	cout << "Prisklasse D:" << endl;
-	for (int i = 0; i < vaerelser.getKlasseD().size(); i++)
-	{
-		cout << "Nr. " << vaerelser.getKlasseD()[i].getVnummer() << " Pris: " << vaerelser.getKlasseD()[i].getPris() << endl;
-	}
-
-	cout << endl;
-
-	cout << "Prisklasse E:" << endl;
-	for (int i = 0; i < vaerelser.getKlasseE().size(); i++)
-	{
-		cout << "Nr. " << vaerelser.getKlasseE()[i].getVnummer() << " Pris: " << vaerelser.getKlasseE()[i].getPris() << endl;
-	}
-
-
-	cout << endl;
-
-	cout << hotel.makeReservation(john, 'A', 20171220, 20171224) << endl;
-	cout << hotel.makeReservation(jared, 'A', 20171218, 20171229) << endl;
-	hotel.makeReservation(john, 'B', 20171220, 20171224);
-	hotel.makeReservation(jared, 'B', 20171222, 20171228);
-	hotel.makeReservation(john, 'C', 20171220, 20171224);
-	hotel.makeReservation(jared, 'E', 20171222, 20171228);
-	hotel.makeReservation(john, 'B', 20171220, 20171224);
-	hotel.makeReservation(jared, 'A', 20171229, 20171231);
+	int res1 = hotel.makeReservation(john, 'A', 20171220, 20171224);
+	int res2 = hotel.makeReservation(jared, 'A', 20171218, 20171229);
+	int res3 = hotel.makeReservation(john, 'B', 20171220, 20171224);
+	int res4 = hotel.makeReservation(jared, 'B', 20171222, 20171228);
+	int res5 = hotel.makeReservation(john, 'C', 20171220, 20171224);
+	int res6 = hotel.makeReservation(jared, 'E', 20171222, 20171228);
+	int res7 = hotel.makeReservation(john, 'B', 20171220, 20171224);
+	int res8 = hotel.makeReservation(jared, 'A', 20171229, 20171231);
 	
-	/*
-	cout << "Vaerelse: " << hotel.getReservationer()[0][1] << " Fra: " << hotel.getReservationer()[0][2] << " Til: " << hotel.getReservationer()[0][3] << endl;
-	cout << "Vaerelse: " << hotel.getReservationer()[1][1] << " Fra: " << hotel.getReservationer()[1][2] << " Til: " << hotel.getReservationer()[1][3] << endl;
-	cout << "Vaerelse: " << hotel.getReservationer()[2][1] << " Fra: " << hotel.getReservationer()[2][2] << " Til: " << hotel.getReservationer()[2][3] << endl;
-	cout << "Vaerelse: " << hotel.getReservationer()[3][1] << " Fra: " << hotel.getReservationer()[3][2] << " Til: " << hotel.getReservationer()[3][3] << endl;
-	cout << "Vaerelse: " << hotel.getReservationer()[4][1] << " Fra: " << hotel.getReservationer()[4][2] << " Til: " << hotel.getReservationer()[4][3] << endl;
-	cout << "Vaerelse: " << hotel.getReservationer()[5][1] << " Fra: " << hotel.getReservationer()[5][2] << " Til: " << hotel.getReservationer()[5][3] << endl;
-	*/
+	cout << endl << std::string(50, '*') << endl << endl;
+
 	hotel.printRes();
-	cout << endl;
-	hotel.cancleRes(1);
-	hotel.cancleRes(2);
-	hotel.cancleRes(2);
-	hotel.cancleRes(7);
-	hotel.cancleRes(5);
+
+	cout << std::string(50, '*') << endl << endl;
+
+	hotel.cancleRes(res1);
+	hotel.cancleRes(res2);
+	hotel.cancleRes(res2);
+	hotel.cancleRes(res7);
+	hotel.cancleRes(res5);
+
+	cout << std::string(50, '*') << endl << endl;
+
 	hotel.printRes();
-	cout << endl;
+
+	cout << std::string(50, '*') << endl << endl;
 	
 	hotel.makeReservation(john, 'B', 20171220, 20171224);
 	hotel.makeReservation(jared, 'B', 20171222, 20171228);
@@ -130,28 +86,8 @@ int main() {
 	hotel.makeReservation(jared, 'E', 20171222, 20171228);
 	hotel.makeReservation(john, 'B', 20171220, 20171224);
 	hotel.makeReservation(jared, 'A', 20171229, 20171231);
-	hotel.cancleRes(7);
-	hotel.cancleRes(5);
+
 	hotel.printRes();
-	/*
-	int datoFraIn = 181;
-	int datoTilIn = 181;
-	int datoTilFra = std::stoi(std::to_string(datoFraIn) + std::to_string(datoTilIn));
-	cout << datoTilFra;
-	*/
-	
 
-
-	/*
-	string testSt = "Teststring";
-
-	for (int i : testSt)
-	{
-		cout << (char)i << " ";
-	}
-
-
-	cout << vaerelser.getVvec()[0].getPris() << " " << vaerelser.getVvec()[0].getVnummer() << endl;
-	*/
 	return 0;
 }

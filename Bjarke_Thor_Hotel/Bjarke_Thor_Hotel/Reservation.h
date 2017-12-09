@@ -16,12 +16,10 @@ public:
 	*/
 
 	int makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int datoTilIn);
-
 	void cancleRes(int);
-
 	void addPrisklasser(Vaerelser& vIn);
-
 	void printRes();
+	void printPrisklasser();
 	bool isAvailable(int, int, int);
 
 	std::vector<std::array<int, 5>> getReservationer();

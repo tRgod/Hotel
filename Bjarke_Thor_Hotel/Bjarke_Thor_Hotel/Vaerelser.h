@@ -10,7 +10,6 @@ public:
 
 	void addRoom(Vaerelse&);
 	void listRoomClasses();
-	std::vector<Vaerelse> getVvec();
 	std::vector<Vaerelse> getKlasseA();
 	std::vector<Vaerelse> getKlasseB();
 	std::vector<Vaerelse> getKlasseC();
