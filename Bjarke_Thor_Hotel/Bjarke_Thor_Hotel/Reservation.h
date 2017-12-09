@@ -17,18 +17,21 @@ public:
 
 	int makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int datoTilIn);
 	void cancleRes(int);
+
+	void lavKvittering(int resNr);
+
 	void addPrisklasser(Vaerelser& vIn);
 	void printRes();
 	void printPrisklasser();
 	bool isAvailable(int, int, int);
 
-	std::vector<std::array<int, 5>> getReservationer();
+	std::vector<std::array<int, 6>> getReservationer();
 	~Reservation();
 
 protected:
 	int delNum = 0;
 	int resNum = 1;
-	std::vector<std::array<int, 5>> reservationer;
+	std::vector<std::array<int, 6>> reservationer;
 	std::vector<Vaerelse> prisKlasseA;
 	std::vector<Vaerelse> prisKlasseB;
 	std::vector<Vaerelse> prisKlasseC;
