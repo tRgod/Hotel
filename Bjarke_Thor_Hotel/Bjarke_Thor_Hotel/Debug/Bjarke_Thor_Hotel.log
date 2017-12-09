@@ -1,0 +1,13 @@
+﻿  Vaerelser.cpp
+c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(18): warning C4018: '<': signed/unsigned mismatch
+c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(45): warning C4018: '<': signed/unsigned mismatch
+c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(49): warning C4018: '<': signed/unsigned mismatch
+c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(53): warning C4018: '<': signed/unsigned mismatch
+c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(57): warning C4018: '<': signed/unsigned mismatch
+c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(61): warning C4018: '<': signed/unsigned mismatch
+  Source.cpp
+c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\source.cpp(24): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\source.cpp(45): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Bjarke_Thor_Hotel.vcxproj -> C:\Users\thor\Desktop\Bjarke_Thor_Hotel\Bjarke_Thor_Hotel\Debug\Bjarke_Thor_Hotel.exe
