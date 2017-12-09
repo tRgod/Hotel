@@ -111,7 +111,7 @@ void Reservation::lavKvittering(int resNr)
 		Dato datoTil(reservationer[resIdenks-1][3]);
 		pris = datoTil.forskelIDage(datoFra)*reservationer[resIdenks-1][5];
 	}
-	cout <<"Prisen for opholdet paa vaerelse # " <<reservationer[resIdenks-1][1]<< " er " << pris << " kr." << endl;
+	cout <<"Prisen for opholdet paa vaerelse # " <<reservationer[resIdenks-1][1]<< " er " << pris << " kr. " << endl;
 	cout << endl;
 }
 
