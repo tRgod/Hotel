@@ -50,7 +50,7 @@ int Reservation::makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int
 	{
 		if (isAvailable((*prisklasseV)[i].getVnummer(), datoFraIn, datoTilIn))
 		{
-			reservationer.push_back({ gaestIn.getId(), (*prisklasseV)[i].getVnummer(), datoFraIn, datoTilIn, resNum });
+			reservationer.push_back({ gaestIn.getId(), (*prisklasseV)[i].getVnummer(), datoFraIn, datoTilIn, resNum ,(int)(*prisklasseV)[i].getPris() });
 			bookSuccess = true;
 			break;
 		}
@@ -88,6 +88,31 @@ void Reservation::cancleRes(int resNr)
 		
 	}
 	delNum = 0;
+}
+
+void Reservation::lavKvittering(int resNr)
+{
+	int resIdenks=0;
+	bool isCorrect = false;
+	for (int i = 0; i < reservationer.size(); i++)
+	{
+		resIdenks++;
+		if (reservationer[i][4]== resNr)
+		{
+			isCorrect = true;
+			break;
+		}
+
+	}
+	int pris = 0;
+	if (isCorrect)
+	{
+		Dato datoFra(reservationer[resIdenks-1][2]);
+		Dato datoTil(reservationer[resIdenks-1][3]);
+		pris = datoTil.forskelIDage(datoFra)*reservationer[resIdenks-1][5];
+	}
+	cout <<"Prisen for opholdet paa vaerelse # " <<reservationer[resIdenks-1][1]<< " er " << pris << " kr." << endl;
+	cout << endl;
 }
 
 void Reservation::addPrisklasser(Vaerelser& vIn)
@@ -138,7 +163,7 @@ bool Reservation::isAvailable(int vaerelseIn, int datoFraIn, int datoTilIn)
 	return true;
 }
 
-std::vector<std::array<int, 5>> Reservation::getReservationer()
+std::vector<std::array<int, 6>> Reservation::getReservationer()
 {
 	return reservationer;
 }

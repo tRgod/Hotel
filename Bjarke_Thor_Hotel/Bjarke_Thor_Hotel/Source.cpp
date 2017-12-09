@@ -116,6 +116,7 @@ int main() {
 	*/
 	hotel.printRes();
 	cout << endl;
+	hotel.lavKvittering(1);
 	hotel.cancleRes(1);
 	hotel.cancleRes(2);
 	hotel.cancleRes(2);
@@ -133,6 +134,7 @@ int main() {
 	hotel.cancleRes(7);
 	hotel.cancleRes(5);
 	hotel.printRes();
+	
 	/*
 	int datoFraIn = 181;
 	int datoTilIn = 181;
