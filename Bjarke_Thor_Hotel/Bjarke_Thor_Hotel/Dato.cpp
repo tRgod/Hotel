@@ -1,3 +1,8 @@
+/*
+Portefoelje 3, C++.
+Bjarke Larsen
+Thor Moeller Roerdal
+*/
 //
 // Created by Bjarke Engsig Larsen on 06/09/2017.
 //

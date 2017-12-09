@@ -1,3 +1,9 @@
+/*
+Portefoelje 3, C++.
+Bjarke Larsen
+Thor Moeller Roerdal
+*/
+
 #include "Vaerelser.h"
 #include<iostream>
 

@@ -1,6 +1,11 @@
+/*
+Portefoelje 3, C++.
+Bjarke Larsen
+Thor Moeller Roerdal
+*/
+
 #include <iostream>
 #include "Vaerelser.h"
-//#include "Vaerelse.h"
 #include "Reservation.h"
 
 using namespace std;
@@ -56,13 +61,20 @@ int main() {
 	int res1 = hotel.makeReservation(john, 'A', 20171220, 20171224);
 	int res2 = hotel.makeReservation(jared, 'A', 20171218, 20171229);
 	int res3 = hotel.makeReservation(john, 'B', 20171220, 20171224);
+	
+	cout << endl << std::string(50, '*') << endl << endl;
+
+	hotel.lavKvittering(res1);
+	hotel.lavKvittering(res2);
+	hotel.lavKvittering(res3);
+	
 	int res4 = hotel.makeReservation(jared, 'B', 20171222, 20171228);
 	int res5 = hotel.makeReservation(john, 'C', 20171220, 20171224);
 	int res6 = hotel.makeReservation(jared, 'E', 20171222, 20171228);
 	int res7 = hotel.makeReservation(john, 'B', 20171220, 20171224);
 	int res8 = hotel.makeReservation(jared, 'A', 20171229, 20171231);
 	
-	cout << endl << std::string(50, '*') << endl << endl;
+	cout << std::string(50, '*') << endl << endl;
 
 	hotel.printRes();
 
@@ -80,12 +92,14 @@ int main() {
 
 	cout << std::string(50, '*') << endl << endl;
 	
-	hotel.makeReservation(john, 'B', 20171220, 20171224);
+	hotel.makeReservation(john, 'A', 20171220, 20171224);
 	hotel.makeReservation(jared, 'B', 20171222, 20171228);
-	hotel.makeReservation(john, 'C', 20171220, 20171224);
-	hotel.makeReservation(jared, 'E', 20171222, 20171228);
+	hotel.makeReservation(john, 'A', 20171220, 20171224);
+	hotel.makeReservation(jared, 'A', 20171222, 20171228);
 	hotel.makeReservation(john, 'B', 20171220, 20171224);
-	hotel.makeReservation(jared, 'A', 20171229, 20171231);
+	hotel.makeReservation(jared, 'A', 20171224, 20171231);
+
+	cout << endl << std::string(50, '*') << endl << endl;
 
 	hotel.printRes();
 

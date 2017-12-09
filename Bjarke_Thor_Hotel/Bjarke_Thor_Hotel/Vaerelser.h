@@ -1,4 +1,10 @@
 #pragma once
+/*
+Portefoelje 3, C++.
+Bjarke Larsen
+Thor Moeller Roerdal
+*/
+
 #include <vector>
 //#include <array>
 #include "Vaerelse.h"

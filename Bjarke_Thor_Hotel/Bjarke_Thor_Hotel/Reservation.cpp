@@ -1,3 +1,9 @@
+/*
+Portefoelje 3, C++.
+Bjarke Larsen
+Thor Moeller Roerdal
+*/
+
 #include "Reservation.h"
 #include <string>
 #include <iostream>
@@ -11,16 +17,6 @@ Reservation::Reservation()
 
 int Reservation::makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int datoTilIn)
 {
-	/*
-	Opgaver:
-
-	Sorter i X forskellige prisklasser.
-
-	Tjek også for om fra og til datoer er på hver side af en eksisterende booking.
-
-	Gør listen med værelser tilgængelige i reservationer uden at tilføje til makeReservation().
-	*/
-
 	bool bookSuccess = false;
 	std::vector<Vaerelse>* prisklasseV = NULL;
 
@@ -46,7 +42,6 @@ int Reservation::makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int
 		break;
 	}
 
-
 	for (int i = 0; i < prisklasseV->size(); i++)
 	{
 		if (isAvailable((*prisklasseV)[i].getVnummer(), datoFraIn, datoTilIn))
@@ -64,7 +59,8 @@ int Reservation::makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int
 	}
 	else 
 	{
-		return 0;
+		std::cout << "Intet vaerelse tilgaengeligt i denne prisklasse til denne periode. (" << prisIn << ")" << std::endl;
+		return -1;
 	}
 }
 
@@ -85,17 +81,17 @@ void Reservation::cancleRes(int resNr)
 		{
 			delNum++;
 		}
-		
 	}
+
 	if (isCorrect)
 	{
 		reservationer.erase(reservationer.begin() + delNum);
-		std::cout << "Reservation Nr# " << resNr << " er anulleret" << std::endl;
+		std::cout << "Reservation nr. " << resNr << " er anulleret." << std::endl;
 		std::cout << std::endl;
 	}
 	else
 	{
-		std::cout << "Ingen Reservation med Resvertions nummer #" << resNr << std::endl;
+		std::cout << "Ingen reservation med reservations nr. " << resNr << "." << std::endl;
 		std::cout << std::endl;
 	}
 	delNum = 0;
@@ -113,7 +109,6 @@ void Reservation::lavKvittering(int resNr)
 			isCorrect = true;
 			break;
 		}
-		
 	}
 	int pris = 0;
 	if (isCorrect)
@@ -122,7 +117,7 @@ void Reservation::lavKvittering(int resNr)
 		Dato datoTil(reservationer[resIdenks-1][3]);
 		pris = datoTil.forskelIDage(datoFra)*reservationer[resIdenks-1][5];
 	}
-	cout <<"Prisen for opholdet paa vaerelse # " <<reservationer[resIdenks-1][1]<< " er " << pris << " kr. " << endl;
+	cout << "Prisen for opholdet paa vaerelse nr. " << reservationer[resIdenks-1][1]<< " er " << pris << " kr. " << endl;
 	cout << endl;
 }
 
@@ -142,7 +137,7 @@ void Reservation::printRes()
 		Dato datoFra(reservationer[i][2]);
 		Dato datoTil(reservationer[i][3]);
 
-		std::cout << "Vaerelse nr: " << reservationer[i][1] << std::endl;
+		std::cout << "Vaerelse nr. " << reservationer[i][1] << std::endl;
 		std::cout << "Udlejet fra den ";
 		datoFra.print();
 		std::cout << "Til den ";
@@ -194,7 +189,6 @@ void Reservation::printPrisklasser()
 
 bool Reservation::isAvailable(int vaerelseIn, int datoFraIn, int datoTilIn)
 {
-	
 	for (int i = 0; i < reservationer.size(); i++)
 	{
 		if (vaerelseIn == reservationer[i][1])

@@ -1,4 +1,10 @@
 #pragma once
+/*
+Portefoelje 3, C++.
+Bjarke Larsen
+Thor Moeller Roerdal
+*/
+
 #include <vector>
 #include <array>
 #include "Gaest.h"
@@ -8,12 +14,6 @@ class Reservation
 {
 public:
 	Reservation();
-
-	/*
-	makeReservation skal return int som er reservationsNr.
-	Dette sættes ind på reservationer som 5. element.
-	Dette tal gives ved cancel res og finder den på listen og sletter den.
-	*/
 
 	int makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int datoTilIn);
 	void cancleRes(int);

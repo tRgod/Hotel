@@ -1,5 +1,9 @@
 #pragma once
-
+/*
+Portefoelje 3, C++.
+Bjarke Larsen
+Thor Moeller Roerdal
+*/
 
 class Vaerelse
 {

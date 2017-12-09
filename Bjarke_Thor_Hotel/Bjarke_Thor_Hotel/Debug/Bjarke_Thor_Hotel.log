@@ -1,13 +1,26 @@
 ﻿  Vaerelser.cpp
-c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(18): warning C4018: '<': signed/unsigned mismatch
-c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(45): warning C4018: '<': signed/unsigned mismatch
-c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(49): warning C4018: '<': signed/unsigned mismatch
-c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(53): warning C4018: '<': signed/unsigned mismatch
-c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(57): warning C4018: '<': signed/unsigned mismatch
-c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(61): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(17): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(47): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(51): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(55): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(59): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\vaerelser.cpp(63): warning C4018: '<': signed/unsigned mismatch
+  Vaerelse.cpp
   Source.cpp
-c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\source.cpp(24): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\thor\desktop\bjarke_thor_hotel\bjarke_thor_hotel\bjarke_thor_hotel\source.cpp(45): warning C4018: '<': signed/unsigned mismatch
+  Reservation.cpp
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\reservation.cpp(45): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\reservation.cpp(71): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\reservation.cpp(104): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\reservation.cpp(135): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\reservation.cpp(152): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\reservation.cpp(160): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\reservation.cpp(168): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\reservation.cpp(176): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\reservation.cpp(184): warning C4018: '<': signed/unsigned mismatch
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\reservation.cpp(192): warning C4018: '<': signed/unsigned mismatch
+  Gaest.cpp
+  Dato.cpp
   Generating Code...
-  Bjarke_Thor_Hotel.vcxproj -> C:\Users\thor\Desktop\Bjarke_Thor_Hotel\Bjarke_Thor_Hotel\Debug\Bjarke_Thor_Hotel.exe
+c:\users\bel50\source\repos\hotel\bjarke_thor_hotel\bjarke_thor_hotel\dato.cpp(322): warning C4715: 'Dato::ugedagTekst': not all control paths return a value
+  Bjarke_Thor_Hotel.vcxproj -> C:\Users\bel50\Source\Repos\Hotel\Bjarke_Thor_Hotel\Debug\Bjarke_Thor_Hotel.exe
