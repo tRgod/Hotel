@@ -69,23 +69,33 @@ int Reservation::makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int
 
 void Reservation::cancleRes(int resNr)
 {
+	bool isCorrect = false;
 	
 	for (int i = 0; i < reservationer.size(); i++)
 	{
 		
 		if (reservationer[i][4] == resNr)
 		{
-			reservationer.erase(reservationer.begin() + delNum);
-			std::cout << "Reservation Nr# " << resNr << " er anulleret"<< std::endl;
-			std::cout << std::endl;
+			
+			isCorrect = true;
+			break;
 		}
 		else
 		{
 			delNum++;
-			//std::cout << "Ingen Reservation med Resvertions nummer #" << resNr << std::endl;
-			//std::cout << std::endl;
 		}
 		
+	}
+	if (isCorrect)
+	{
+		reservationer.erase(reservationer.begin() + delNum);
+		std::cout << "Reservation Nr# " << resNr << " er anulleret" << std::endl;
+		std::cout << std::endl;
+	}
+	else
+	{
+		std::cout << "Ingen Reservation med Resvertions nummer #" << resNr << std::endl;
+		std::cout << std::endl;
 	}
 	delNum = 0;
 }
