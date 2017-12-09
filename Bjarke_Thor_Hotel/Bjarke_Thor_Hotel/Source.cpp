@@ -35,7 +35,7 @@ int main() {
 	vaerelser.addRoom(v10);
 	Vaerelse v11(11, 100025);
 	vaerelser.addRoom(v11);
-	Vaerelse v12(12, 1304);
+	Vaerelse v12(12, 1505);
 	vaerelser.addRoom(v12);
 	Vaerelse v13(13, 13041);
 	vaerelser.addRoom(v13);
@@ -97,8 +97,32 @@ int main() {
 
 	cout << endl;
 
-	hotel.makeReservation(john, 'A', 20171220, 20171224);
-	hotel.makeReservation(jared, 'A', 20171222, 20171228);
+	cout << hotel.makeReservation(john, 'A', 20171220, 20171224) << endl;
+	cout << hotel.makeReservation(jared, 'A', 20171218, 20171229) << endl;
+	hotel.makeReservation(john, 'B', 20171220, 20171224);
+	hotel.makeReservation(jared, 'B', 20171222, 20171228);
+	hotel.makeReservation(john, 'C', 20171220, 20171224);
+	hotel.makeReservation(jared, 'E', 20171222, 20171228);
+	hotel.makeReservation(john, 'B', 20171220, 20171224);
+	hotel.makeReservation(jared, 'A', 20171229, 20171231);
+	
+	/*
+	cout << "Vaerelse: " << hotel.getReservationer()[0][1] << " Fra: " << hotel.getReservationer()[0][2] << " Til: " << hotel.getReservationer()[0][3] << endl;
+	cout << "Vaerelse: " << hotel.getReservationer()[1][1] << " Fra: " << hotel.getReservationer()[1][2] << " Til: " << hotel.getReservationer()[1][3] << endl;
+	cout << "Vaerelse: " << hotel.getReservationer()[2][1] << " Fra: " << hotel.getReservationer()[2][2] << " Til: " << hotel.getReservationer()[2][3] << endl;
+	cout << "Vaerelse: " << hotel.getReservationer()[3][1] << " Fra: " << hotel.getReservationer()[3][2] << " Til: " << hotel.getReservationer()[3][3] << endl;
+	cout << "Vaerelse: " << hotel.getReservationer()[4][1] << " Fra: " << hotel.getReservationer()[4][2] << " Til: " << hotel.getReservationer()[4][3] << endl;
+	cout << "Vaerelse: " << hotel.getReservationer()[5][1] << " Fra: " << hotel.getReservationer()[5][2] << " Til: " << hotel.getReservationer()[5][3] << endl;
+	*/
+	hotel.printRes();
+	cout << endl;
+	hotel.cancleRes(1);
+	hotel.cancleRes(2);
+	hotel.cancleRes(2);
+	hotel.cancleRes(7);
+	hotel.cancleRes(5);
+	hotel.printRes();
+	cout << endl;
 	
 	hotel.makeReservation(john, 'B', 20171220, 20171224);
 	hotel.makeReservation(jared, 'B', 20171222, 20171228);
@@ -106,15 +130,9 @@ int main() {
 	hotel.makeReservation(jared, 'E', 20171222, 20171228);
 	hotel.makeReservation(john, 'B', 20171220, 20171224);
 	hotel.makeReservation(jared, 'A', 20171229, 20171231);
-
-	cout << "Vaerelse: " << hotel.getReservationer()[0][1] << " Fra: " << hotel.getReservationer()[0][2] << " Til: " << hotel.getReservationer()[0][3] << endl;
-	cout << "Vaerelse: " << hotel.getReservationer()[1][1] << " Fra: " << hotel.getReservationer()[1][2] << " Til: " << hotel.getReservationer()[1][3] << endl;
-	cout << "Vaerelse: " << hotel.getReservationer()[2][1] << " Fra: " << hotel.getReservationer()[2][2] << " Til: " << hotel.getReservationer()[2][3] << endl;
-	cout << "Vaerelse: " << hotel.getReservationer()[3][1] << " Fra: " << hotel.getReservationer()[3][2] << " Til: " << hotel.getReservationer()[3][3] << endl;
-	cout << "Vaerelse: " << hotel.getReservationer()[4][1] << " Fra: " << hotel.getReservationer()[4][2] << " Til: " << hotel.getReservationer()[4][3] << endl;
-	cout << "Vaerelse: " << hotel.getReservationer()[5][1] << " Fra: " << hotel.getReservationer()[5][2] << " Til: " << hotel.getReservationer()[5][3] << endl;
-	
-
+	hotel.cancleRes(7);
+	hotel.cancleRes(5);
+	hotel.printRes();
 	/*
 	int datoFraIn = 181;
 	int datoTilIn = 181;

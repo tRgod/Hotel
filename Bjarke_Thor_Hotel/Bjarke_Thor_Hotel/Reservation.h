@@ -15,17 +15,22 @@ public:
 	Dette tal gives ved cancel res og finder den på listen og sletter den.
 	*/
 
-	void makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int datoTilIn);
+	int makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int datoTilIn);
+
+	void cancleRes(int);
 
 	void addPrisklasser(Vaerelser& vIn);
 
+	void printRes();
 	bool isAvailable(int, int, int);
 
-	std::vector<std::array<int, 4>> getReservationer();
+	std::vector<std::array<int, 5>> getReservationer();
 	~Reservation();
 
 protected:
-	std::vector<std::array<int, 4>> reservationer;
+	int delNum = 0;
+	int resNum = 1;
+	std::vector<std::array<int, 5>> reservationer;
 	std::vector<Vaerelse> prisKlasseA;
 	std::vector<Vaerelse> prisKlasseB;
 	std::vector<Vaerelse> prisKlasseC;
