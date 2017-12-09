@@ -66,7 +66,7 @@ int main() {
 	cout << "Vaerelse: " << hotel.getReservationer()[4][1] << " Fra: " << hotel.getReservationer()[4][2] << " Til: " << hotel.getReservationer()[4][3] << endl;
 	cout << "Vaerelse: " << hotel.getReservationer()[5][1] << " Fra: " << hotel.getReservationer()[5][2] << " Til: " << hotel.getReservationer()[5][3] << endl;
 
-	vaerelser.sortRoomClasses();
+	
 	/*
 	int datoFraIn = 181;
 	int datoTilIn = 181;

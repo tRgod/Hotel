@@ -57,8 +57,8 @@ bool Reservation::isAvailable(int vaerelseIn, int datoFraIn, int datoTilIn)
 		if (vaerelseIn == reservationer[i][1])
 		{
 			if ((datoFraIn <= reservationer[i][3] && datoFraIn >= reservationer[i][2]) || 
-				(datoTilIn <= reservationer[i][3] && datoTilIn >= reservationer[i][2]) ||
-				(datoFraIn< reservationer[i][3] && datoTilIn>reservationer[i][2]))
+				(datoTilIn <= reservationer[i][3] && datoTilIn >= reservationer[i][2]) 
+				/*(datoFraIn< reservationer[i][3] && datoTilIn>reservationer[i][2])*/)
 			{
 				return false;	//Tjekker ikke hvis en booking "indeholder" en anden.
 			}
