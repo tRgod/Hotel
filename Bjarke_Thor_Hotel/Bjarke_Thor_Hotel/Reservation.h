@@ -9,6 +9,12 @@ class Reservation
 public:
 	Reservation();
 
+	/*
+	makeReservation skal return int som er reservationsNr.
+	Dette sættes ind på reservationer som 5. element.
+	Dette tal gives ved cancel res og finder den på listen og sletter den.
+	*/
+
 	void makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int datoTilIn);
 
 	void addPrisklasser(Vaerelser& vIn);

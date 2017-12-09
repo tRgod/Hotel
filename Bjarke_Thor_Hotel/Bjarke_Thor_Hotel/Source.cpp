@@ -8,13 +8,11 @@ using namespace std;
 
 int main() {
 
+	// Opret hotel
 	Reservation hotel;
-
-	Gaest john("John", 19741209, 27);
-	Gaest jared("Jared", 19720412, 28);
-
 	Vaerelser vaerelser;
 
+	// Opret værelser
 	Vaerelse v1(1, 1020);
 	vaerelser.addRoom(v1);
 	Vaerelse v2(2, 324);
@@ -41,14 +39,61 @@ int main() {
 	vaerelser.addRoom(v12);
 	Vaerelse v13(13, 13041);
 	vaerelser.addRoom(v13);
-
+	
 	hotel.addPrisklasser(vaerelser);
+	
+	// Gæster
+	Gaest john("John", 19741209, 27);
+	Gaest jared("Jared", 19720412, 28);
+
+
 
 
 	for (int i = 0; i < vaerelser.getVvec().size(); i++)
 	{
 		cout << "Varelses nr: " << vaerelser.getVvec()[i].getVnummer() << " | Pris: " << vaerelser.getVvec()[i].getPris() << endl;
 	}
+
+	cout << endl;
+
+	cout << "Prisklasse A:" << endl;
+	for (int i = 0; i < vaerelser.getKlasseA().size(); i++)
+	{
+		cout << "Nr. " << vaerelser.getKlasseA()[i].getVnummer() << " Pris: " << vaerelser.getKlasseA()[i].getPris() << endl;
+	}
+
+	cout << endl;
+
+	cout << "Prisklasse B:" << endl;
+	for (int i = 0; i < vaerelser.getKlasseB().size(); i++)
+	{
+		cout << "Nr. " << vaerelser.getKlasseB()[i].getVnummer() << " Pris: " << vaerelser.getKlasseB()[i].getPris() << endl;
+	}
+
+	cout << endl;
+
+	cout << "Prisklasse C:" << endl;
+	for (int i = 0; i < vaerelser.getKlasseC().size(); i++)
+	{
+		cout << "Nr. " << vaerelser.getKlasseC()[i].getVnummer() << " Pris: " << vaerelser.getKlasseC()[i].getPris() << endl;
+	}
+
+	cout << endl;
+
+	cout << "Prisklasse D:" << endl;
+	for (int i = 0; i < vaerelser.getKlasseD().size(); i++)
+	{
+		cout << "Nr. " << vaerelser.getKlasseD()[i].getVnummer() << " Pris: " << vaerelser.getKlasseD()[i].getPris() << endl;
+	}
+
+	cout << endl;
+
+	cout << "Prisklasse E:" << endl;
+	for (int i = 0; i < vaerelser.getKlasseE().size(); i++)
+	{
+		cout << "Nr. " << vaerelser.getKlasseE()[i].getVnummer() << " Pris: " << vaerelser.getKlasseE()[i].getPris() << endl;
+	}
+
 
 	cout << endl;
 
