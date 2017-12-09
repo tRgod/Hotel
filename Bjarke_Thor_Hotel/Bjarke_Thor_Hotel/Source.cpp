@@ -25,7 +25,7 @@ int main() {
 	vaerelser.addRoom(v4);
 	Vaerelse v5(5, 5000);
 	vaerelser.addRoom(v5);
-	Vaerelse v6(6, 1235);
+	Vaerelse v6(6, 2235);
 	vaerelser.addRoom(v6);
 	Vaerelse v7(7, 543.5);
 	vaerelser.addRoom(v7);
@@ -42,6 +42,9 @@ int main() {
 	Vaerelse v13(13, 13041);
 	vaerelser.addRoom(v13);
 
+	hotel.addPrisklasser(vaerelser);
+
+
 	for (int i = 0; i < vaerelser.getVvec().size(); i++)
 	{
 		cout << "Varelses nr: " << vaerelser.getVvec()[i].getVnummer() << " | Pris: " << vaerelser.getVvec()[i].getPris() << endl;
@@ -49,15 +52,15 @@ int main() {
 
 	cout << endl;
 
-	hotel.makeReservation(john, vaerelser, 20171220, 20171224);
-	hotel.makeReservation(jared, vaerelser, 20171222, 20171228);
-
-	hotel.makeReservation(john, vaerelser, 20171220, 20171224);
-	hotel.makeReservation(jared, vaerelser, 20171222, 20171228);
-	hotel.makeReservation(john, vaerelser, 20171220, 20171224);
-	hotel.makeReservation(jared, vaerelser, 20171222, 20171228);
-	hotel.makeReservation(john, vaerelser, 20171220, 20171224);
-	hotel.makeReservation(jared, vaerelser, 20171229, 20171231);
+	hotel.makeReservation(john, 'A', 20171220, 20171224);
+	hotel.makeReservation(jared, 'A', 20171222, 20171228);
+	
+	hotel.makeReservation(john, 'B', 20171220, 20171224);
+	hotel.makeReservation(jared, 'B', 20171222, 20171228);
+	hotel.makeReservation(john, 'C', 20171220, 20171224);
+	hotel.makeReservation(jared, 'E', 20171222, 20171228);
+	hotel.makeReservation(john, 'B', 20171220, 20171224);
+	hotel.makeReservation(jared, 'A', 20171229, 20171231);
 
 	cout << "Vaerelse: " << hotel.getReservationer()[0][1] << " Fra: " << hotel.getReservationer()[0][2] << " Til: " << hotel.getReservationer()[0][3] << endl;
 	cout << "Vaerelse: " << hotel.getReservationer()[1][1] << " Fra: " << hotel.getReservationer()[1][2] << " Til: " << hotel.getReservationer()[1][3] << endl;
@@ -65,8 +68,8 @@ int main() {
 	cout << "Vaerelse: " << hotel.getReservationer()[3][1] << " Fra: " << hotel.getReservationer()[3][2] << " Til: " << hotel.getReservationer()[3][3] << endl;
 	cout << "Vaerelse: " << hotel.getReservationer()[4][1] << " Fra: " << hotel.getReservationer()[4][2] << " Til: " << hotel.getReservationer()[4][3] << endl;
 	cout << "Vaerelse: " << hotel.getReservationer()[5][1] << " Fra: " << hotel.getReservationer()[5][2] << " Til: " << hotel.getReservationer()[5][3] << endl;
+	
 
-	vaerelser.sortRoomClasses();
 	/*
 	int datoFraIn = 181;
 	int datoTilIn = 181;

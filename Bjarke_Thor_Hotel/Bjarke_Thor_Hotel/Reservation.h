@@ -9,7 +9,7 @@ class Reservation
 public:
 	Reservation();
 
-	void makeReservation(Gaest& gaestIn, Vaerelser& vIn, int datoFraIn, int datoTilIn);
+	void makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int datoTilIn);
 
 	void addPrisklasser(Vaerelser& vIn);
 

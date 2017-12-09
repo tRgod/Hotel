@@ -7,7 +7,7 @@ Reservation::Reservation()
 {
 }
 
-void Reservation::makeReservation(Gaest& gaestIn, Vaerelser& vIn, int datoFraIn, int datoTilIn)
+void Reservation::makeReservation(Gaest& gaestIn, char prisIn, int datoFraIn, int datoTilIn)
 {
 	/*
 	Opgaver:
@@ -20,12 +20,36 @@ void Reservation::makeReservation(Gaest& gaestIn, Vaerelser& vIn, int datoFraIn,
 	*/
 
 	bool bookSuccess = false;
+	std::vector<Vaerelse>* prisklasseV = NULL;
 
-	for (int i = 0; i < vIn.getVvec().size(); i++)
+	switch (prisIn)
 	{
-		if (isAvailable(vIn.getVvec()[i].getVnummer(), datoFraIn, datoTilIn))
+	case 'A':
+		prisklasseV = &prisKlasseA;
+		break;
+	case 'B':
+		prisklasseV = &prisKlasseB;
+		break;
+	case 'C':
+		prisklasseV = &prisKlasseC;
+		break;
+	case 'D':
+		prisklasseV = &prisKlasseD;
+		break;
+	case 'E':
+		prisklasseV = &prisKlasseE;
+		break;
+	default:
+		prisklasseV = &prisKlasseA;
+		break;
+	}
+
+
+	for (int i = 0; i < prisklasseV->size(); i++)
+	{
+		if (isAvailable((*prisklasseV)[i].getVnummer(), datoFraIn, datoTilIn))
 		{
-			reservationer.push_back({ gaestIn.getId(), vIn.getVvec()[i].getVnummer(), datoFraIn, datoTilIn });
+			reservationer.push_back({ gaestIn.getId(), (*prisklasseV)[i].getVnummer(), datoFraIn, datoTilIn });
 			bookSuccess = true;
 			break;
 		}
@@ -36,7 +60,6 @@ void Reservation::makeReservation(Gaest& gaestIn, Vaerelser& vIn, int datoFraIn,
 	else
 		std::cout << "No rooms available." << std::endl;
 
-
 }
 
 void Reservation::addPrisklasser(Vaerelser& vIn)
@@ -46,7 +69,6 @@ void Reservation::addPrisklasser(Vaerelser& vIn)
 	prisKlasseC = vIn.getKlasseC();
 	prisKlasseD = vIn.getKlasseD();
 	prisKlasseE = vIn.getKlasseE();
-
 }
 
 bool Reservation::isAvailable(int vaerelseIn, int datoFraIn, int datoTilIn)
