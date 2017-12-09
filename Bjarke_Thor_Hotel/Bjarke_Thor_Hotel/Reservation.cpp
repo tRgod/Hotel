@@ -1,6 +1,7 @@
 #include "Reservation.h"
 #include <string>
 #include <iostream>
+#include "Dato.h"
 
 
 Reservation::Reservation()
@@ -87,9 +88,6 @@ void Reservation::cancleRes(int resNr)
 		
 	}
 	delNum = 0;
-	
-	
-
 }
 
 void Reservation::addPrisklasser(Vaerelser& vIn)
@@ -103,10 +101,22 @@ void Reservation::addPrisklasser(Vaerelser& vIn)
 
 void Reservation::printRes()
 {
+
 	for (int i = 0; i < reservationer.size(); i++)
 	{
-		std::cout << "Vaerelse: " << reservationer[i][1] << " Fra: " << reservationer[i][2] << " Til: " << reservationer[i][3] << "Reg Nr: " << reservationer[i][4] << std::endl;
-		//std::cout << std::endl;
+		Dato datoFra(reservationer[i][2]);
+		Dato datoTil(reservationer[i][3]);
+
+		std::cout << "Vaerelse nr: " << reservationer[i][1] << std::endl;
+		std::cout << "Udlejet fra den ";
+		datoFra.print();
+		std::cout << "Til den ";
+		datoTil.print();
+		std::cout << std::endl;
+
+
+
+		//std::cout << "Vaerelse: " << reservationer[i][1] << " Fra: " << reservationer[i][2] << " Til: " << reservationer[i][3] << "Reg Nr: " << reservationer[i][4] << std::endl;
 	}
 }
 
@@ -121,7 +131,7 @@ bool Reservation::isAvailable(int vaerelseIn, int datoFraIn, int datoTilIn)
 				(datoTilIn <= reservationer[i][3] && datoTilIn >= reservationer[i][2]) ||
 				(datoFraIn< reservationer[i][3] && datoTilIn>reservationer[i][2]))
 			{
-				return false;	//Tjekker ikke hvis en booking "indeholder" en anden.
+				return false;
 			}
 		}
 	}
