@@ -16,7 +16,6 @@ public:
 	bool isAvailable(int, int, int);
 
 	std::vector<std::array<int, 4>> getReservationer();
-
 	~Reservation();
 
 protected:
