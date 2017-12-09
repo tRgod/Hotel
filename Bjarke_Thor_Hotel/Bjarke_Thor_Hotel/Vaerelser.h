@@ -8,8 +8,8 @@ class Vaerelser
 public:
 	Vaerelser();
 
-	void addRoom(Vaerelse);
-	void sortRoomClasses();
+	void addRoom(Vaerelse&);
+	void listRoomClasses();
 	std::vector<Vaerelse> getVvec();
 	std::vector<Vaerelse> getKlasseA();
 	std::vector<Vaerelse> getKlasseB();
